@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+
+  /* Layout */
+
+body{
+  background-color: rgb(112, 209, 216);
+  font-family: 'Montserrat', sans-serif;
+}
+
+#view-page{
+  display: grid;
+  grid-template: '. view-top .' 50vh
+    '. view-bottom .' 50vh
+  /5% 90% 5%;
+  color: white;
+  grid-gap: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 2em;
+}
+
+.view-top{
+  grid-area: view-top;
+}
+
+.view-bottom{
+  grid-area: view-bottom;
+  display: flex;
+  align-items: top;
+  justify-content: space-evenly;
+}
+
+/* view-page */
+
+.view-month{
+  display: grid;
+  grid-template: 'month-name month-name month-name' 5em
+    'box1 box2 box3' 10em
+    /10em 10em 10em;
+}
+
+.month-name{
+  grid-area: month-name;
+  text-align: center;
+  padding: 1em;
+  /* TODO center justify text */
+}
+
+.box1{
+  grid-area: box1;
+}
+
+.box2{
+  grid-area: box2;
+}
+
+.box3{
+  grid-area: box3;
+}
+
+.month-box{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+  justify-content: center;
+  padding: 1em;
+}
+
+
+/* Typography */
+
+.month-letter{
+  font-size: 1em;
+  text-align: center;
+}
+

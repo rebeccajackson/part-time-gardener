@@ -1,18 +1,22 @@
 const express = require('express')
 const hbs = require('express-handlebars')
-
-const userRoutes = require('./routes/users')
+const bodyParser = require('body-parser')
+const routes = require('./routes/routes')
 
 const server = express()
 
 // Middleware
 
-server.engine('hbs', hbs({extname: 'hbs'}))
+server.engine('hbs', hbs({
+  extname: 'hbs',
+  defaultLayout: 'main'
+}))
 server.set('view engine', 'hbs')
-server.use(express.urlencoded({extended: true}))
+server.use(express.static('public'))
+server.use(bodyParser.urlencoded({extended: true}))
 
 // Routes
 
-server.use('/', userRoutes)
+server.use('/', routes)
 
 module.exports = server
