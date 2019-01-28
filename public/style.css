@@ -115,6 +115,16 @@ th a{
   border-bottom-left-radius: 5px;
 }
 
+.veg-body{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.veg-title h1{
+  display: flex;
+  align-items: space-evenly;
+  justify-content: center;
+}
 /* Colors */
 
 .summer{

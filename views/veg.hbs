@@ -1,1 +1,25 @@
-<h1>veg page</h1>
+<div class="veg-page">
+  <div class="veg-title">
+    <h1>veg.name{{name}}</h1>
+  </div>
+  <div class="veg-body">
+    <div class="icon-container">
+      <div class="condition">
+        <h3>Condition</h3>
+        <img src="{{icon.conditon}}" alt="image of condition">
+      </div>
+      <div class="pest">
+        <h3>Pests</h3>
+        <img src="{{icon.pests}}" alt="image of pest">
+      </div>
+    </div>
+
+    <div class="tips-container">
+      <h3>Things to note</h3>
+      <p>
+        Put each veg tip in here
+        {{veg.tips}}
+      </p>
+    </div>
+  </div>
+</div>
